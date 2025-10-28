@@ -2,7 +2,7 @@
 import os
 import tempfile
 import streamlit as st
-OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
+
 
 from utils import (
     extract_text_from_pdf,
@@ -12,9 +12,11 @@ from utils import (
     create_md_report,
 )
 from langchain_openai import ChatOpenAI
-from langchain_openai import OpenAIEmbeddings
+from langchain_openai.embeddings import OpenAIEmbeddings
 from langchain_community.vectorstores import Chroma
 from langchain_core.documents import Document
+
+OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
 
 st.set_page_config(page_title="AI Resume Analyzer", layout="wide")
 st.title("📄 AI Resume Analyzer — Streamlit + LangChain + Chroma + OpenAI")
@@ -33,6 +35,7 @@ embeddings = OpenAIEmbeddings(
 )
 
 llm = ChatOpenAI(model_name="gpt-4o-mini", temperature=0.2, api_key=OPENAI_API_KEY)
+st.success("✅ Embeddings and LLM initialized successfully!")
 
 st.sidebar.header("Options")
 save_to_chroma = st.sidebar.checkbox("Store resume in local Chroma DB (faster semantic search)", value=True)
