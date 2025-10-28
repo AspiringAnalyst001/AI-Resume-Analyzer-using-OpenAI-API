@@ -1,0 +1,13 @@
+prefix=E:/personal/LANGCHAIN/venv/Library
+exec_prefix=E:/personal/LANGCHAIN/venv/Library
+libdir=E:/personal/LANGCHAIN/venv/Library/lib
+sharedlibdir=E:/personal/LANGCHAIN/venv/Library/lib
+includedir=E:/personal/LANGCHAIN/venv/Library/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.3.1
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
