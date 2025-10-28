@@ -27,7 +27,11 @@ if not OPENAI_API_KEY:
 
 # Initialize embeddings and LLM
 st.write("Loaded API key:", bool(OPENAI_API_KEY))
-embeddings = OpenAIEmbeddings(api_key=OPENAI_API_KEY)
+embeddings = OpenAIEmbeddings(
+    model="text-embedding-3-small",
+    api_key=OPENAI_API_KEY
+)
+
 llm = ChatOpenAI(model_name="gpt-4o-mini", temperature=0.2, openai_api_key=OPENAI_API_KEY)
 
 st.sidebar.header("Options")
