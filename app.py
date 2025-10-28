@@ -11,7 +11,7 @@ from utils import (
 )
 from langchain_openai import ChatOpenAI
 from langchain_openai import OpenAIEmbeddings
-from langchain_chroma import Chroma
+from langchain_community.vectorstores import Chroma
 from langchain_core.documents import Document
 
 st.set_page_config(page_title="AI Resume Analyzer", layout="wide")
