@@ -32,7 +32,7 @@ embeddings = OpenAIEmbeddings(
     api_key=OPENAI_API_KEY
 )
 
-llm = ChatOpenAI(model_name="gpt-4o-mini", temperature=0.2, openai_api_key=OPENAI_API_KEY)
+llm = ChatOpenAI(model_name="gpt-4o-mini", temperature=0.2, api_key=OPENAI_API_KEY)
 
 st.sidebar.header("Options")
 save_to_chroma = st.sidebar.checkbox("Store resume in local Chroma DB (faster semantic search)", value=True)
