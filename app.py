@@ -2,6 +2,8 @@
 import os
 import tempfile
 import streamlit as st
+OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
+
 from utils import (
     extract_text_from_pdf,
     chunk_text,
@@ -24,6 +26,7 @@ if not OPENAI_API_KEY:
     st.stop()
 
 # Initialize embeddings and LLM
+st.write("Loaded API key:", bool(OPENAI_API_KEY))
 embeddings = OpenAIEmbeddings(api_key=OPENAI_API_KEY)
 llm = ChatOpenAI(model_name="gpt-4o-mini", temperature=0.2, openai_api_key=OPENAI_API_KEY)
 
