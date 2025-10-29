@@ -1,8 +1,7 @@
 🧠 AI Resume Analyzer using OpenAI API & LangChain
 
 
-[
-https://github.com/AspiringAnalyst001/AI-Resume-Analyzer-using-OpenAI-API/blob/main/Project%20Overview.png](https://github.com/AspiringAnalyst001/AI-Resume-Analyzer-using-OpenAI-API/blob/main/Project%20Overview.png)
+[https://github.com/AspiringAnalyst001/AI-Resume-Analyzer-using-OpenAI-API/blob/main/Project%20Overview.png](https://github.com/AspiringAnalyst001/AI-Resume-Analyzer-using-OpenAI-API/blob/main/Project%20Overview.png)
 
 
 
@@ -121,5 +120,6 @@ This project is licensed under the MIT License
 .
 
 💡 “AI won’t replace humans, but humans using AI will replace those who don’t.”
+
 
 
